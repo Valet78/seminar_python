@@ -14,3 +14,8 @@ for i in range(-inNum, inNum + 1):
 print(f'Числа из диапазона -{inNum}...{inNum} -> [{strRes}]')   
     
     
+'''
+a = list(map(int, input().split()))
+print(max(a))
+
+'''
