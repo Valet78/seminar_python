@@ -6,4 +6,6 @@
 
 inNumTxt = input('Введите дробное число: ').replace(",", ".")
 inNum = int((float(inNumTxt) * 10) % 10)
-print(f'Десятая часть введённой дроби {inNumTxt} равна {inNum}')
+if inNum != 0:
+    print(f'Десятая часть введённой дроби {inNumTxt} равна {inNum}')
+else: print(f'У введённого числа {inNumTxt} нет дробной части') 
