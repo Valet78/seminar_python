@@ -12,10 +12,12 @@ print('Введите координаты точки (X и Y), где X ≠ 0 �
 inX = int(input('X = '))
 inY = int(input('Y = '))
 quarter = ''
-if inX != 0 and inY != 0:
-    if inX > 0 and inY > 0: quarter = 'в 1'
-    if inX < 0 and inY > 0: quarter = 'во 2'
-    if inX < 0 and inY < 0: quarter = 'в 3'
-    if inX > 0 and inY < 0: quarter = 'в 4'
-    print(f'Точка с координатами ({inX}, {inY}) находится {quarter} четверти')
-else: print('Введены некорректные координаты. Попробуйте снова.')
+
+if inX > 0 and inY > 0: quarter = 'в 1 четверти'
+elif inX < 0 and inY > 0: quarter = 'во 2 четверти'
+elif inX < 0 and inY < 0: quarter = 'в 3 четверти'
+elif inX > 0 and inY < 0: quarter = 'в 4 четверти'
+elif inX == 0 and inY != 0: quarter = 'на оси 0Y'
+elif inX != 0 and inY == 0: quarter = 'на оси 0X'
+else: quarter = 'в центре системы координат'
+print(f'Точка с координатами ({inX}, {inY}) находится {quarter}')
