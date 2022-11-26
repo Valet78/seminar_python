@@ -9,9 +9,14 @@ inNumTxt = input('Введите количество элементов (1+1/n)
 if inNumTxt.isnumeric():
     listRes = []
     inNum = int(inNumTxt)
+    sum = 0
+    temp = 0
     for i in range(1, inNum + 1):
-        listRes.append((1 + i ** -1) ** i)
+        temp = (1 + i ** -1) ** i
+        listRes.append(temp)
+        sum += temp
     
-    print(f'Для N = {inNum} будет последовательность {listRes}')
+
+    print(f'\nДля N = {inNum} будет последовательность {listRes}, а сумма этих элементов равна {sum}\n')
 else: print('Введённая последовательность символов не является натуральным числом.')
 
