@@ -25,7 +25,7 @@ def sumNum(inTxt):
     return summ
 
 
-inNumTxt = input('Введите число для получения суммы его чисел: ').replace(',', '.')
+inNumTxt = input('Введите число для получения суммы его цифр: ').replace(',', '.')
 if verifNum(inNumTxt): 
-    print(f'{inNumTxt} - > сумма чисел равна {sumNum(inNumTxt)}')
-else: print('Введено некорректное значение. Попробуйте снова.')
+    print(f'\n{inNumTxt} - > сумма цифр равна {sumNum(inNumTxt)}\n')
+else: print('\nВведено некорректное значение. Попробуйте снова.\n')
