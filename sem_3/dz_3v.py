@@ -5,6 +5,8 @@
 Пример:
             [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
+Вариант решения 
+
 """
 
 
@@ -12,11 +14,8 @@
 myList = [1.1, 1.2, 3.1, 5, 10.01]
 resList = []
 for inn in myList:
-    innTxt = str(float(inn))
-    indPoint = innTxt.find('.') + 1         # находим координаты цифры за точкой
-    dd = innTxt[indPoint:indPoint + 2]      # готовим подстроку
-    if len(dd) == 1: dd += '0'
-    if dd != '00': resList.append(dd)
+    dd = round((inn - int(inn)), 2) * 100
+    if dd != 0: resList.append(dd)
 
 res, ttInt  = 0, 0
 max, min = int(resList[0]), int(resList[0])
@@ -26,6 +25,5 @@ for tt in resList:
     if ttInt > max: max = ttInt
 
 res = (max - min) / 100
-#res = '0.' + str(max - min)
 
 print(f'Разница между максимальным и минимальным значением дробной части элементов списка {myList} равна {res}')
