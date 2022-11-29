@@ -25,6 +25,12 @@ if inNumTxt.isnumeric():
         with open(pathFile, "r") as fileTxt:
             listPoz = fileTxt.readlines()
             listPoz = [line.rstrip() for line in listPoz]    # Убираем сиволы переноса строки \n   
+        
+        # вариант открытия файла от преподавателя
+        # with open(pathFile, "r") as fileTxt:
+        #     listPoz = fileTxt.read().split('\n')            # Читаем и убираем сиволы переноса строки \n 
+        #     listPoz = list(map(int, listPoz))    
+
         for i in listPoz:
             proizv *= listRes[int(i)]
         
