@@ -13,7 +13,7 @@ def Fibonachi(numer):
             fibonNegList.append(0)
         elif i == 1 or i == 2:
            fibonPozList.append(1)
-           fibonNegList.append(((-1)**(i+1)) * 1)  
+           fibonNegList.append(((-1)**(i+1)) * 1)
         else:
             temp = fibonPozList[i - 1] + fibonPozList[i - 2]      
             fibonPozList.append(temp)
@@ -36,6 +36,8 @@ if inNumTxt.isnumeric():
         fibonNegaList = []
         
         Fibonachi(inNum + 1)
+        print(fibonNegList)
+        
         NegaFibonachi(inNum + 1)
         
         print(f'\nДля N = {inNum} - > {fibonNegaList}\n')    

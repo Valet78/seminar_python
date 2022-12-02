@@ -9,9 +9,13 @@ from random import randint
 
 #myList = [-2, 3, 7, -5, 6, 9, 3]
 myList = [randint(-9, 9) for i in range(10)]
-sum = 0
+sums = 0
 
 for ind in range(len(myList)):
-    if ind % 2 != 0: sum += myList[ind]
+    if ind % 2 != 0: sums += myList[ind]
 
-print(f'\nДля списка {myList} сумма чисел на нечётных позициях = {sum}\n')
+print(f'\nДля списка {myList} сумма чисел на нечётных позициях = {sums}\n')
+
+
+# вариант от преподавателя
+# print(f'\nДля списка {myList} сумма чисел на нечётных позициях = {sum(myList[1::2])}\n')
