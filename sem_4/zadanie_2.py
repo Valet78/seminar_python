@@ -27,7 +27,7 @@ def SposobTwo(inA, inB, inC):
 
 
 
-inNum = list(map(int, input('Введите через пробел значения A, B и C квадратного уравнения Ax² + Bx + C = 0 (A≠0): ').split(' ')))
+inNum = list(map(int, input('Введите через пробел значения A, B и C квадратного уравнения Ax² + Bx + C = 0 (A≠0): ').split()))
 A, B, C = inNum
 print('\nВариант 1:')
 SposobOne(A, B, C)
