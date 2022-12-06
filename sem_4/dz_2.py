@@ -10,17 +10,13 @@ from sympy import primefactors
 
 def SpisokRealOne(num: int):
     listRes = []
-    temp, st = num, 0
-    for ind in [2, 3, 5, 7]:        
-        while temp % ind == 0: 
-            temp /= ind
-            st += 1        
-        if st > 0: 
-            listRes.append(ind)
-            temp, st = int(num / (ind**st)), 0 
-    if temp != 0: listRes.append(temp)
-    return listRes
-
+    temp, st = num, 2
+    while temp != 1:        
+        while temp % st == 0: 
+            temp //= st
+            listRes.append(st)
+        st += 1              
+    return sorted(list(set(listRes))) 
 
 try:
     inNum = int(input('Введите натуральное число N: '))
