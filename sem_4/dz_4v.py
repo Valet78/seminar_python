@@ -23,14 +23,16 @@ def GenPolinom(k: int) -> str:
     temp = ''
     for i in range(k + 1)[::-1]:
         if i > 0: temp += f'{randint(0, 100)}*x**{i} + ' 
-        else: temp += f'{randint(0, 20)}*x**{i}'
+        else: temp += f'{randint(0, 100)}*x**{i}'
+    temp = str(simplify(temp)) + ' = 0'
     return temp
 
 try:
     inNumK = int(input('Введите значение натуральной степени k='))
     if inNumK > 0:
-        strForFile = str(simplify(GenPolinom(inNumK)))        
-        SaveFile(f'{strForFile} = 0')    # Запишем полученное в файл
+        #strForFile = str(simplify(GenPolinom(inNumK))) 
+        strForFile = GenPolinom(inNumK)       
+        SaveFile(strForFile)    # Запишем полученное в файл
     else: print('Введено некоректное значение.')
     
 except ValueError:
