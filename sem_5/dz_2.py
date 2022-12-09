@@ -15,6 +15,12 @@ from random import randint
 oneCandy, twoCandy = 0, 0   # количество конфет у игроков
 numCandy = 117
 
+def resBot(num: int) -> int:
+    temp = randint(1, 28)
+    while temp > num:
+       temp = randint(1, 28) 
+    return temp
+
 print('\nНачинаем игру.')
 try:
     typeGame = int(input('Вторым игроком будет 1-человек, 2-бот: '))
@@ -23,12 +29,11 @@ try:
         typeGame = int(input('Вторым игроком будет 1-человек, 2-бот: '))
 
     currentGamer = randint(1, 2)
-    print(f'\nПервым будет играть {currentGamer} игрок')
+    print(f'Первым будет играть {currentGamer} игрок')
 
     while numCandy != 0:
         if typeGame == 2:
             if currentGamer == 2: 
-                resBot = lambda x: x if x <= 28 else randint(1, 28)
                 minusCandy = resBot(numCandy)
                 print(f'Второй игрок забрал {minusCandy} из {numCandy}')
             else: minusCandy = int(input(f'Игрок {currentGamer}, сколько конфет Вы зеберёте из {numCandy}? - '))
