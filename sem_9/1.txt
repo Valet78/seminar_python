@@ -1,0 +1,6 @@
+https://python-telegram-bot.org/
+https://core.telegram.org/bots#how-do-bots-work
+https://pypi.org/project/isOdd/
+
+
+Форматирование строк https://digitology.tech/docs/python_3/tutorial/inputoutput.html 
