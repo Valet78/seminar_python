@@ -15,6 +15,7 @@ from os import getcwd
 pathFile = getcwd() + '\\sem_4\\file_4.txt'
 
 def SaveFile(strSave: str):
+    
     with open(pathFile, "a") as fileTxt:
         fileTxt.write(strSave + '\n') 
 
